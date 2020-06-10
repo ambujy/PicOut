@@ -1,4 +1,31 @@
 body{
     font-family: 'Roboto Mono', monospace;
-    background-color: aqua;
+    background-color: blue;
+}
+
+li {
+  display: block ;
+}
+
+
+.navbar{
+  width: 100%;
+}
+
+.topnav {
+    position: relative;
+    overflow: hidden;
+  }
+
+.topnav-centered {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+
 }
