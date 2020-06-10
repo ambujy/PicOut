@@ -3,6 +3,10 @@ body{
     background-color: blue;
 }
 
+h1{
+  font-size: 100px;
+}
+
 li {
   display: block ;
 }
