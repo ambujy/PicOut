@@ -3,16 +3,84 @@ body{
     background-color: blue;
 }
 
-h1{
-  font-size: 100px;
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  width: 99%;
 }
 
-li {
-  display: block ;
+button.like{
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	line-heigth: 50px;
+	border-radius: 50%;
+	color: rgba(0,150,136 ,1);
+	background-color:rgba(38,166,154 ,0.3);
+	border-color: rgba(0,150,136 ,1);
+	border-width: 1px;
+	font-size: 15px;
 }
 
+button.dislike{
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	line-heigth: 50px;
+	border-radius: 50%;
+	color: rgba(255,82,82 ,1);
+	background-color: rgba(255,138,128 ,0.3);
+	border-color: rgba(255,82,82 ,1);
+	border-width: 1px;
+	font-size: 15px;
+}
+
+button.download{
+  width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	line-heigth: 50px;
+	border-radius: 50%;
+	color: rgba(255,82,82 ,1);
+	background-color: rgba(250, 163, 64, 0.3);
+	border-color: rgba(255,82,82 ,1);
+	border-width: 1px;
+  font-size: 15px;
+}
+
+button.share{
+  width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	line-heigth: 50px;
+	border-radius: 50%;
+	color: rgb(5, 121, 255);
+	background-color: rgba(52, 135, 230, 0.3);
+	border-color: rgba(5, 121, 255);
+	border-width: 1px;
+  font-size: 15px;
+  float: right;
+}
+
+.container{
+  top: 10px;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  height: auto;
+}
+
+.trend-fresh, .other-link, .log-cred{
+  overflow: auto;
+}
+
+.nav-container{
+  /* text-align: center; */
+}
 
 .navbar{
+  height: max-content;
   width: 100%;
 }
 
@@ -22,11 +90,14 @@ li {
   }
 
 .topnav-centered {
-    float: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+#logout{
+    display: none;
   }
 
   /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
