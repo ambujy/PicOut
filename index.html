@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/signup.css">
     <title>PicOut-Home</title>
 </head>
 
@@ -54,7 +55,7 @@
                     </div>
                     &nbsp;
                     <div id="login">
-                        <li><button class="btn btn-outline-primary"><i class="fa fa-sign-in"></i>
+                        <li><button class="btn btn-outline-primary" onclick="document.getElementById('id02').style.display='block'"><i class="fa fa-sign-in"></i>
                                 Login</button>
                         </li>
                     </div>
@@ -102,7 +103,36 @@
           </div>
         </form>
       </div>
+
+      <!-- ############# Login pop-up ############### -->
+      <div id="id02" class="modal2">
+  
+        <form class="modal2-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close modal2">&times;</span>
+            <h1>Login</h1>
+          </div>
+          <hr>
+          <div class="login-c">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
       
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+
+            <button type="submit" class="btn btn-success">Login</button>
+            
+            <button type="button" onclick="document.getElementById('id02').style.display='none'" class="btn btn-danger">Cancel</button>
+            <div>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+          </div>
+        </form>
+      </div>
 
     <!-- Creating cards for the images -->
     <div class="container">
@@ -151,6 +181,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
     <!-- Script for pop-signup and log in -->
+
+    <script>
+        // Get the modal2
+        var modal2 = document.getElementById('id02');
+        
+        // When the user clicks anywhere outside of the modal2, close it
+        window.onclick = function(event) {
+            if (event.target == modal2) {
+                modal2.style.display = "none";
+            }
+        }
+        </script>
 
     <script>
         // Get the modal
