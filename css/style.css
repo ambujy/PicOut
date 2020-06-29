@@ -1,3 +1,20 @@
+
+
+/* Hide Scroll-Bar */
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
 body{
     font-family: 'Roboto Mono', monospace;
     background-color: blue;
@@ -20,7 +37,7 @@ button.like{
 	background-color:rgba(38,166,154 ,0.3);
 	border-color: rgba(0,150,136 ,1);
 	border-width: 1px;
-	font-size: 15px;
+	font-size: 20px;
 }
 
 button.dislike{
@@ -33,11 +50,11 @@ button.dislike{
 	background-color: rgba(255,138,128 ,0.3);
 	border-color: rgba(255,82,82 ,1);
 	border-width: 1px;
-	font-size: 15px;
+	font-size: 20px;
 }
 
 button.download{
-  width: 30px;
+  	width: 30px;
 	height: 30px;
 	margin: 0 auto;
 	line-heigth: 50px;
@@ -46,11 +63,13 @@ button.download{
 	background-color: rgba(250, 163, 64, 0.3);
 	border-color: rgba(255,82,82 ,1);
 	border-width: 1px;
-  font-size: 15px;
+	font-size: 20px;
+	/* position: relative;
+	left: 76%; */
 }
 
 button.share{
-  width: 30px;
+  	width: 30px;
 	height: 30px;
 	margin: 0 auto;
 	line-heigth: 50px;
@@ -59,8 +78,9 @@ button.share{
 	background-color: rgba(52, 135, 230, 0.3);
 	border-color: rgba(5, 121, 255);
 	border-width: 1px;
-  font-size: 15px;
-  float: right;
+	font-size: 20px;
+	/* position: relative;
+	left: 76%; */
 }
 
 .container{
@@ -100,7 +120,44 @@ button.share{
     display: none;
   }
 
-  /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
-@media screen and (max-width: 600px) {
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color:darkgray !important; 
+}
 
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+    background-color: darkgray !important;
+}
+.hamburger-box{
+  width:24px !important;
+  height:18px !important;
+}
+
+.navbar .navbar-toggler{
+    border:0;
+    outline:0;
+}
+
+  /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 567px) {
+	.container{
+		width: 100%;
+	}
+	.brand-name{
+		display: none;
+	}
+	#text-name{
+		font-size: 0;
+	}
+	.nav .fa { 
+		font-size: 25; 
+		padding: 10px;
+	}
+	.modal2-content{
+		width: 90%;
+	}
+	button.like, button.dislike, button.download, button.share{
+		margin-bottom: 5px;
+	}
 }

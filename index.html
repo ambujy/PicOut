@@ -1,12 +1,15 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/hamburgers.css">
+    <link rel="icon" href="images/PicOut.png"  type="image/png">
     <title>PicOut-Home</title>
 </head>
 
@@ -14,10 +17,24 @@
     <div class="nav-container">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top p-2">
 
-            <a class="navbar-brand" href="#">PicOut</a>
+            <a class="navbar-brand" href="#">
+                <div class="brand-logo" style="height: auto; width: 50px;">
+                    <img src="images/logo.png" alt="PicOut"/> 
+                </div>
+            </a>
+            <a class="navbar-brand" href="#">
+                <div class="brand-name">
+                    PicOut
+                </div>
+            </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
-                <span class="navbar-toggler-icon"></span>
+                <!-- <span class="navbar-toggler-icon"></span> -->
+                <div class="hamburger hamburger--spin">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
             </button>
 
             <div class="topnav-centered">
@@ -25,23 +42,23 @@
                 <!-- <div class="trend-fresh"> -->
                 <ul class="nav navbar-nav navbar-expand">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">&nbsp;<i class="fa fa-line-chart"></i> Trending</a>
+                        <a class="nav-link" id="text-name" href="#">&nbsp;<i class="fa fa-line-chart"></i> Trending</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">&nbsp;<i class="fa fa-clock-o"></i> Fresh</a>
+                        <a class="nav-link" id="text-name" href="#">&nbsp;<i class="fa fa-clock-o"></i> Fresh</a>
                     </li>
                     <!-- </ul>
                     </div>
                     <div class="other-link">
                         <ul class="nav navbar-nav navbar-expand"> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="#">&nbsp;<i class="fa fa-home"></i> Home</a>
+                        <a class="nav-link" id="text-name" href="#">&nbsp;<i class="fa fa-home"></i> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">&nbsp;<i class="fa fa-newspaper-o"></i> News</a>
+                        <a class="nav-link" id="text-name" href="#">&nbsp;<i class="fa fa-newspaper-o"></i> News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">&nbsp;<i class="fa fa-smile-o"></i> Funny</a>
+                        <a class="nav-link" id="text-name" href="#">&nbsp;<i class="fa fa-smile-o"></i> Funny</a>
                     </li>
                 </ul>
                 <!-- </div> -->
@@ -50,7 +67,7 @@
             <div class="log-cred collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="nav navbar-nav ml-auto navbar-expand">
                     <div id="signup">
-                        <li><button class="btn btn-outline-primary" id="hideL"
+                        <li><button class="btn btn-outline-primary" id="text-name"
                                 onclick="document.getElementById('id01').style.display='block',
                                 document.getElementById('id02').style.display='none' "><i
                                     class="fa fa-user-plus"></i>
@@ -58,7 +75,7 @@
                     </div>
                     &nbsp;
                     <div id="login">
-                        <li><button class="btn btn-outline-primary" id="hideS"
+                        <li><button class="btn btn-outline-primary" id="text-name"
                                 onclick="document.getElementById('id02').style.display='block',
                                 document.getElementById('id01').style.display='none' "><i
                                     class="fa fa-sign-in"></i>
@@ -67,7 +84,7 @@
                     </div>
                     &nbsp;
                     <div id="logout">
-                        <li><button class="btn btn-outline-primary"><i class="fa fa-sign-out"></i>
+                        <li><button class="btn btn-outline-primary" id="text-name"><i class="fa fa-sign-out"></i>
                                 Logout</button>
                         </li>
                     </div>
@@ -218,6 +235,30 @@
             }
         }
     </script>
+
+<script>
+    /**
+     * forEach implementation for Objects/NodeLists/Arrays, automatic type loops and context options
+     *
+     * @private
+     * @author Todd Motto
+     * @link https://github.com/toddmotto/foreach
+     * @param {Array|Object|NodeList} collection - Collection of items to iterate, could be an Array, Object or NodeList
+     * @callback requestCallback      callback   - Callback function for each iteration.
+     * @param {Array|Object|NodeList} scope=null - Object/NodeList/Array that forEach is iterating over, to use as the this value when executing callback.
+     * @returns {}
+     */
+    var forEach = function (t, o, r) { if ("[object Object]" === Object.prototype.toString.call(t)) for (var c in t) Object.prototype.hasOwnProperty.call(t, c) && o.call(r, t[c], c, t); else for (var e = 0, l = t.length; l > e; e++)o.call(r, t[e], e, t) };
+
+    var hamburgers = document.querySelectorAll(".hamburger");
+    if (hamburgers.length > 0) {
+        forEach(hamburgers, function (hamburger) {
+            hamburger.addEventListener("click", function () {
+                this.classList.toggle("is-active");
+            }, false);
+        });
+    }
+</script>
 
 </body>
 
