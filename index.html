@@ -50,15 +50,17 @@
             <div class="log-cred collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="nav navbar-nav ml-auto navbar-expand">
                     <div id="signup">
-                        <li><button class="btn btn-outline-primary"
-                                onclick="document.getElementById('id01').style.display='block'"><i
+                        <li><button class="btn btn-outline-primary" id="hideL"
+                                onclick="document.getElementById('id01').style.display='block',
+                                document.getElementById('id02').style.display='none' "><i
                                     class="fa fa-user-plus"></i>
                                 SignUp</button></li>
                     </div>
                     &nbsp;
                     <div id="login">
-                        <li><button class="btn btn-outline-primary"
-                                onclick="document.getElementById('id02').style.display='block'"><i
+                        <li><button class="btn btn-outline-primary" id="hideS"
+                                onclick="document.getElementById('id02').style.display='block',
+                                document.getElementById('id01').style.display='none' "><i
                                     class="fa fa-sign-in"></i>
                                 Login</button>
                         </li>
