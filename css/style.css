@@ -140,7 +140,7 @@ button.share{
 }
 
   /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
-@media screen and (max-width: 567px) {
+@media screen and (max-width: 650px) {
 	.container{
 		width: 100%;
 	}
@@ -154,8 +154,11 @@ button.share{
 		font-size: 25; 
 		padding: 10px;
 	}
-	.modal2-content{
-		width: 90%;
+	.log-cred .fa{
+		font-size: 15px;
+	}
+	.log-cred .btn{
+		inline-size: 5px 5px;
 	}
 	button.like, button.dislike, button.download, button.share{
 		margin-bottom: 5px;
